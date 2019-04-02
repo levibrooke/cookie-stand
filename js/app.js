@@ -27,12 +27,29 @@ new Store('Alki', 2, 16, 4.6);
 
 var hours = ['6am', '7am', '8am', '9am', '10am', '11am', '12pm', '1pm', '2pm', '3pm', '4pm', '5pm', '6pm', '7pm', '8pm'];
 
-// Target lists
-var pikeList = document.getElementById('first-pike');
-var seatacList = document.getElementById('seatac');
-var seattleCenterList = document.getElementById('seattle-center');
-var capHillList = document.getElementById('cap-hill');
-var alkiList = document.getElementById('alki');
+// Render table header
+function makeTable() {
+  var row = document.createElement('tr');
+  var emptyHeader = document.createElement('th');
+  emptyHeader.textContent = '';
+  row.appendChild(emptyHeader);
+
+  for (let i = 0; i < hours.length; i++) {
+    var header = document.createElement('th');
+    header.textContent = hours[i];
+    row.appendChild(header);
+  }
+
+  var totalHeader = document.createElement('th');
+  totalHeader.textContent = 'Daily Location Total';
+  row.appendChild(totalHeader);
+
+  var table = document.getElementById('table');
+  table.appendChild(row);
+}
+
+makeTable();
+
 
 // Generate sales reports page
 function createReport(list, store) {
