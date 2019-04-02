@@ -63,6 +63,15 @@ Store.prototype.render = function() {
     row.appendChild(entry);
   }
 
+  var sum = 0;
+  this.cookieTotals.reduce(function(prev, curr) {
+    return sum = prev + curr;
+  });
+
+  var storeTotal = document.createElement('td');
+  storeTotal.textContent = sum;
+  row.appendChild(storeTotal);
+
   var table = document.getElementById('table');
   table.appendChild(row);
 };
