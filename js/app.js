@@ -91,30 +91,6 @@ function renderAllCookies() {
   }
 }
 
-// Invoke
+// Call functions
 makeTableHeader();
-console.log('allStores', allStores);
 renderAllCookies();
-
-// Generate sales reports page
-function createReport(list, store) {
-
-  store.calculateCookies(hours);
-
-  console.log('store.cookieTotals', store.cookieTotals);
-
-  for (let i = 0; i < store.cookieTotals.length; i++) {
-    var item = document.createElement('li');
-    item.textContent = `${hours[i]}: ${store.cookieTotals[i]} cookies`;
-    list.appendChild(item);
-  }
-
-  var sum = 0;
-  store.cookieTotals.reduce(function(prev, curr) {
-    return sum = prev + curr;
-  });
-  console.log('sum', sum);
-  var sumItem = document.createElement('li');
-  sumItem.textContent = `Total: ${sum} cookies`;
-  list.appendChild(sumItem);
-}
