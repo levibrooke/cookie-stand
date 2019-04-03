@@ -46,7 +46,38 @@ function makeTableHeader() {
 
 // Render table footer
 function makeTableFooter() {
+  var row = document.createElement('tr');
+  var totalsLabel = document.createElement('td');
+  totalsLabel.textContent = 'Totals';
+  row.appendChild(totalsLabel);
 
+
+  var hourTotals = [];
+
+  for (let i = 0; i < hours.length; i++) {
+
+    var hourTotal = 0;
+    var hourTotalContent = document.createElement('td');
+
+    for (let j = 0; j < allStores.length; j++) {
+      hourTotal = hourTotal + allStores[j].cookieTotals[i];
+    }
+    hourTotalContent.textContent = hourTotal;
+    hourTotals.push(hourTotal);
+    row.appendChild(hourTotalContent);
+  }
+
+  var sum = 0;
+  hourTotals.reduce(function(prev, curr) {
+    return sum = prev + curr;
+  });
+
+  var grandTotal = document.createElement('td');
+  grandTotal.textContent = sum;
+  row.appendChild(grandTotal);
+
+  var table = document.getElementById('table');
+  table.appendChild(row);
 }
 
 // Render cookie sales
@@ -94,3 +125,4 @@ function renderAllCookies() {
 // Call functions
 makeTableHeader();
 renderAllCookies();
+makeTableFooter();
