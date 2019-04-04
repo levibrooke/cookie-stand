@@ -14,6 +14,25 @@
   </header>
   <main>
     <div class="container">
+      <form id="add-location">
+        <fieldset>
+          <legend>Add store location</legend>
+
+          <label for="location">Store location:</label>
+          <input type="text" name="location" required />
+
+          <label for="min">Min Customers / hr:</label>
+          <input type="number" name="min" required />
+
+          <label for="max">Max Customers / hr:</label>
+          <input type="number" name="max" required />
+
+          <label for="avg">Avg Cookies / Sale:</label>
+          <input type="number" name="avg" required />
+
+          <button type="submit">Add Store</button>
+        </fieldset>
+      </form>
       <table id="table"></table>
     </div>
   </main>
