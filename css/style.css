@@ -114,3 +114,68 @@ footer {
   columns: 2;
   column-gap: 20px;
 }
+
+/* Sales Report Page */
+#add-location {
+  margin: 100px auto;
+  width: 90%;
+  text-align: left;
+  color: #ffffff;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  font-size: 0.875em;
+}
+
+#add-location legend {
+  margin-bottom: 1em;
+  text-transform: capitalize;
+  font-weight: bold;
+  font-size: 2em;
+}
+
+#add-location input {
+  background: none;
+  border: none;
+  border-bottom: 2px solid #E8C1C5;
+  color: #ffffff;
+}
+
+#add-location button {
+  background-color: #E8C1C5;
+  border: none;
+  color: #ffffff;
+  padding: 8px 20px;
+  cursor: pointer;
+}
+
+#table {
+  border-collapse: collapse;
+  border-spacing: 20px;
+  border: none;
+  table-layout: fixed;
+  margin: 50px auto;
+  width: 90%;
+  color: #ffffff;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  font-size: 0.875em;
+}
+
+#table th, td {
+  text-align: left;
+  padding: 10px;
+  width: 70px;
+}
+
+#table th:first-of-type {
+  width: 120px;
+}
+
+#table th:last-of-type {
+  width: 160px;
+}
+
+#table tr:nth-child(odd) {
+}
+
+#table tr:nth-child(even) {
+  /* background-color: #433b72; */
+}
